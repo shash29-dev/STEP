@@ -32,7 +32,7 @@ We exported all packages installed in environment on which this code is tested t
         ├── apt36k_annotations.json
 
 
-### APT-36K Dataset
+### APT-10K Dataset
  Download the [APT-10K dataset](https://github.com/AlexTheBad/AP-10K) and put it under ```./datasets/APT10k``` folder. Full consolidated json ```ap10k.json``` used for training is available at [Link](https://iitgnacin-my.sharepoint.com/:f:/g/personal/17210095_iitgn_ac_in/EtY-IJh0jtFBmRwn8UCDL-0BcnZrBZXa3_U1PH0kV3g0WQ?e=X49z10). Follow similar setup as APT-36K, and place `.json` in root.
 
  ### CrowdPose Dataset
