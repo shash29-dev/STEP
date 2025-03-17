@@ -61,7 +61,7 @@ Place downloaded models at location pointed by the key `snaps.model_save_dir` in
 
 
 # Acknowledgements
-Code in this repository is uses utilities from : [MMPose](https://github.com/open-mmlab/mmpose), [PyTracking](https://github.com/visionml/pytracking). We thank the authors for their amazing works and sharing the code.
+Code in this repository uses utilities and implementation style from : [MMPose](https://github.com/open-mmlab/mmpose), [PyTracking](https://github.com/visionml/pytracking). We thank the authors for their amazing works and sharing the code.
 
 # Bib
 ```
