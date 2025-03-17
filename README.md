@@ -52,16 +52,16 @@ We provide various settings in `run.sh`. Detailed configs for all datasets and a
 
 
 ### Pre-trained Weights
-Download trained models and consolidated Jsons from [Here](https://iitgnacin-my.sharepoint.com/:f:/g/personal/17210095_iitgn_ac_in/EtY-IJh0jtFBmRwn8UCDL-0BcnZrBZXa3_U1PH0kV3g0WQ?e=X49z10) 
+Download the trained models and consolidated Jsons from [Here](https://iitgnacin-my.sharepoint.com/:f:/g/personal/17210095_iitgn_ac_in/EtY-IJh0jtFBmRwn8UCDL-0BcnZrBZXa3_U1PH0kV3g0WQ?e=X49z10) 
 
-Place downloaded models at as pointed by the key `snaps.model_save_dir` in `config` flag, and `.json` file as mentioned in Dataset section. 
+Place downloaded models at location pointed by the key `snaps.model_save_dir` in `config` flag; and the `.json` file as mentioned in Dataset section. 
 
 # Running STEP on your Videos
 `Coming Soon`
 
 
 # Acknowledgements
-Code in this repository is inspired and use utilities from : [MMPose](https://github.com/open-mmlab/mmpose), [PyTracking](https://github.com/visionml/pytracking). We thank the authors for their amazing works and sharing the code.
+Code in this repository is uses utilities from : [MMPose](https://github.com/open-mmlab/mmpose), [PyTracking](https://github.com/visionml/pytracking). We thank the authors for their amazing works and sharing the code.
 
 # Bib
 ```
