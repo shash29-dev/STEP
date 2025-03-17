@@ -1,0 +1,71 @@
+# @package data
+kind: crowdpose_nokpts_kptsemb
+
+fname: results
+
+meta:
+  genbbox: True
+
+kwargs:
+  root: datasets/Soumya/CROWDPOSE_TEST_20/test/
+  data_path: datasets/Soumya/CROWDPOSE_TEST_20/test/
+
+settings:
+  train: true
+  num_kpts: 14
+  min_kps: 8
+  dataset_info: mmpose/datasets/baseinfo/crowdpose_info.py
+  vitconfig: src/models/vitheads/configs/config_vithead_crowdpose.py
+  annotjson: datasets/Soumya/CROWDPOSE_TEST_20/annotations/test.json
+  offset_factor: 8
+  clean_data_path: False
+  num_epochs: 2000
+  use_gpu: True
+  print_interval: 1
+  print_stats: null
+  description: ${run_title}
+  batch_size: 20
+  sample_per_videos: 5
+  normalize_mean: [102.9801, 115.9465, 122.7717]  # if change--> also in mmpipeline_trans.py
+  normalize_std: [1.0, 1.0, 1.0]
+  crop_type: 'inside_major'
+  search_area_factor: 5.0
+  feature_sz: 18
+  stride: 16
+  center_jitter_factor: {'train': 3, 'test': [5.5, 4.5]}
+  scale_jitter_factor: {'train': 0.25, 'test': 0.5}
+  max_scale_change: null
+  num_workers: 12
+  num_test_frames: 1
+  num_train_frames: 2
+  output_sigma_factor: 0.25
+  target_filter_sz: 1
+  center_sampling_radius: 1.0
+  normalized_bbreg_coords: True
+  frozen_backbone_layers: ['conv1', 'bn1', 'layer1', 'layer2']
+  separate_filter: False
+  num_encoder_layers: 6
+  num_decoder_layers: 6
+  use_test_frame_encoding: True
+  train_samples_per_epoch: 1000
+  hinge_threshold: 0.05
+  weight_giou: 1.0
+  weight_clf: 100.0
+  weight_clf_kpt: 500.0
+  weight_kpmse: 800.0
+  weight_olap_loss: 100
+  weight_oshot_loss: 500
+  freeze_backbone_bn_layers: True
+  module_name: apt
+  script_name: tomp
+  use_kpts_enc: gmsp
+  use_kpts_embedding: True
+  plot_batches: 4
+  use_kpts: False
+
+
+  env:
+    workspace_dir: ${snaps.model_save_dir}
+    tensorboard_dir: ${snaps.model_save_dir}/tensorboard
+
+

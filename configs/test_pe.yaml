@@ -1,0 +1,34 @@
+
+
+
+expName: ${run_title}-${data.kind}-${generator.title}
+sample_interval: 100
+
+defaults:
+  - data: davis.yaml
+
+loss:
+  segm: 100
+
+pipeline:
+  train: True
+  video: False
+  awazi_style: False
+  video_path: null
+  freeze_backbone_bn_layers: True
+
+model_save:
+  model_save_interval: 100
+  model_save_backup_interval: 500
+  default_model_load: True
+  model_load_dir: ${snaps.model_save_dir}
+
+snaps:
+  indir: ./logs/${run_title}/snaps
+  image_save_dir:  ${snaps.indir}/images/${data.kind}
+  model_save_dir: ${snaps.indir}/saved_models/${data.kind}
+  model_save_dir_bkp: ${snaps.indir}/saved_models/${data.kind}/backup
+
+hydra:
+  run:  
+    dir: ./logs/${run_title}/

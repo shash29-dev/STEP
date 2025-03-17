@@ -1,0 +1,33 @@
+
+
+
+expName: ${run_title}-${data.kind}-${generator.title}
+sample_interval: 100
+
+defaults:
+  - data: aptmmpose_nokpts.yaml
+
+loss:
+  segm: 100
+
+pipeline:
+  train: True
+  freeze_backbone_bn_layers: True
+  video: False
+  awazi_style: False
+
+model_save:
+  model_save_interval: 100
+  model_save_backup_interval: 500
+  default_model_load: True
+  model_load_dir: ${snaps.model_save_dir}
+
+snaps:
+  indir: ./logs/${run_title}/snaps
+  image_save_dir:  ${snaps.indir}/images/${data.kind}
+  model_save_dir: ${snaps.indir}/saved_models/${data.kind}
+  model_save_dir_bkp: ${snaps.indir}/saved_models/${data.kind}/backup
+
+hydra:
+  run:  
+    dir: ./logs/${run_title}/
