@@ -65,5 +65,10 @@ Code in this repository uses utilities and implementation style from : [MMPose](
 
 # Bib
 ```
-
+@article{verma2025step,
+  title={STEP: Simultaneous Tracking and Estimation of Pose for Animals and Humans},
+  author={Verma, Shashikant and Katti, Harish and Debnath, Soumyaratna and Swamy, Yamuna and Raman, Shanmuganathan},
+  journal={arXiv preprint arXiv:2503.13344},
+  year={2025}
+}
 ```
